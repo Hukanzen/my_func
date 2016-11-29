@@ -5,7 +5,7 @@
 /* エラーか否かを返す */
 int a_reset(int *,int ,int);
 
-/* :ランダムで数値入力 */
+/* ランダムで数値入力 */
 /* エラーか否かを返す */
 int a_random(int *,int,int,int);
 
@@ -21,6 +21,7 @@ int a_ssort(int *,int,int);
 
 /* 2箇所を入れ換える */
 /* エラーか否かを返す */
+int swap(int *,int *);
 
 /* 中身をすべて表示する */
 /* エラーか否かを返す */

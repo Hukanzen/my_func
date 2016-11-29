@@ -55,6 +55,18 @@ int a_ssort(int *x,int size,int sk)
 	int i,j;
 }
 
+int swap(int *a,int *b)
+{
+	/* ok ?*/
+	int tmp;	
+
+	tmp=*a;
+	*a=*b;
+	*b=tmp;
+
+	return 0;
+}
+
 int a_show(int *x,int size)
 {
 	int i;

@@ -29,6 +29,14 @@ int main(void)
 	int min=a_min(x,p_size);
 	printf("min:%d\n",min);
 
+	printf("=== swap ===\n");
+	int a=200;
+	int b=500;
+	printf("(a,b) = (%d,%d)\n",a,b);
+	swap(&a,&b);
+	printf("(a,b) = (%d,%d)\n",a,b);
+
+
 	printf("=== a_show ===\n");
 	err=a_show(x,p_size);
 	
