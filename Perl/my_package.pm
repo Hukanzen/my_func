@@ -50,3 +50,12 @@ sub reset_file
 	open(WF,">",$file);
 	close(WF);
 }
+
+# ファイルに書き足す
+sub put_file
+{
+	my ($pack_name,$file,$data)=@_;
+	open(WF,">>",$file);
+	print WF $data;
+	close(WF);
+}
