@@ -13,7 +13,7 @@ sub rmv_newline
 	return ;
 }
 
-# ファイル読み込み
+# ファイル読み込み文字列で返す
 sub load_file
 {
 	my ($pack_name,$file)=@_;
@@ -26,4 +26,19 @@ sub load_file
 	close(RF);
 
 	return $data;
+}
+
+# ファイル読み込みし，配列で返す
+sub array_load_file
+{
+	my ($pack_name,$file)=@_;
+	my @data="";
+
+	open(RF,$file);
+	for(my $i=0;<RF>;$i++){
+		$data[$i]=$_;
+	}
+	close(RF);
+
+	return @data;
 }
