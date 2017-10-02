@@ -16,6 +16,14 @@ sub rmv_newline
 	return ;
 }
 
+# 空白をなくす
+sub rmv_space
+{
+	my ($src)=@_;
+	$src=~s/( |　)*//g;
+	return $src;
+}
+
 # ファイル読み込み文字列で返す
 sub load_file
 {
