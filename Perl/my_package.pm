@@ -12,3 +12,18 @@ sub rmv_newline
 	$src=~s/[\r]?\n//g;
 	return ;
 }
+
+# ファイル読み込み
+sub load_file
+{
+	my ($pack_name,$file)=@_;
+	my $data="";
+
+	open(RF,$file);
+	for(my $i=0;<RF>;$i++){
+		$data.=$_;
+	}
+	close(RF);
+
+	return $data;
+}
