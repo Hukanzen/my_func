@@ -42,3 +42,11 @@ sub array_load_file
 
 	return @data;
 }
+
+# ファイルの内容を空にする
+sub reset_file
+{
+	my ($pack_name,$file)=@_;
+	open(WF,">",$file);
+	close(WF);
+}
