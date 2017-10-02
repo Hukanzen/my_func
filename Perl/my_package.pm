@@ -118,3 +118,24 @@ sub get_conf
 		}
 	}
 }
+
+# ディレクトリがないとき。作成する
+sub mk_undir
+{
+	my ($pack_name,$dname)=@_;
+	unless(-d $dname){
+		# 存在しないとき
+		mkdir $dname;
+	}
+}
+
+# ファイルがないとき、作成する
+sub mk_unfile
+{
+	my ($pack_name,$fname)=@_;
+	
+	unless(-e $fname){
+		# 存在しないとき
+		&reset_file($pack_name,$fname);
+	}
+}
