@@ -32,19 +32,20 @@ sub read
 			foreach my $col (@data){
 				push(@colmun,$col);
 			}
-
 			next;
 		}
 		
 		foreach my $col (@colmun){
 			$self->{$col}{$i}=pop(@data);
+			warn Dumper $self->{$col}{$i};
 		}
-		print Dumper @data;
+		#print Dumper @data;
 
 		
 	}
 	close(FP);
 	$self->{LENGTH}=$i;
+	warn Dumper $self->{tweet_id}{1};
 }
 
 sub get_length
