@@ -1,4 +1,4 @@
-package my_package.pm
+package my_package;
 
 # 第一引数には，パッケージ名($pack_name)が入る
 # メゾッド -> メゾッドの場合，明示的に渡す
@@ -139,3 +139,5 @@ sub mk_unfile
 		&reset_file($pack_name,$fname);
 	}
 }
+
+1;
